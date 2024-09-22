@@ -1,0 +1,18 @@
+.cart {
+  background-color: #ebebeb;
+  &__title {
+    padding-top: 10px;
+  }
+
+  &__items {
+    margin-top: 15px;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__itemImage {
+    width: 100px;
+  }
+}

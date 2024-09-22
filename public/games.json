@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "Mortal Kombat 1",
+    "price": 59.99,
+    "image": "https://digiseller.com/preview/1243313/p1_4260067_53e91cdc.jpg",
+    "description": "Mortal Kombat 1 возвращается с новыми персонажами и динамичным геймплеем.",
+    "discount": 10,
+    "twoPlayers": true,
+    "eaSubscription": false,
+    "ps5Subscription": false
+  },
+  {
+    "id": 2,
+    "title": "FIFA 23",
+    "price": 69.99,
+    "image": "https://avatars.mds.yandex.net/get-mpic/7724829/img_id7052701669077339971.jpeg/orig",
+    "description": "Новая версия FIFA с обновленными командами и режимами.",
+    "discount": 15,
+    "twoPlayers": true,
+    "eaSubscription": true,
+    "ps5Subscription": true
+  },
+  {
+    "id": 3,
+    "title": "Call of Duty: Modern Warfare II",
+    "price": 69.99,
+    "image": "https://i.pinimg.com/originals/73/0e/be/730ebeeb5f79808940eb16f23c36eec0.png",
+    "description": "Эпическая война с улучшенной графикой и динамичным геймплеем.",
+    "discount": 0,
+    "twoPlayers": false,
+    "eaSubscription": false,
+    "ps5Subscription": false
+  },
+  {
+    "id": 4,
+    "title": "Hogwarts Legacy",
+    "price": 59.99,
+    "image": "https://www.digiseller.ru/preview/1143483/p1_3616827_1e54e500.jpg",
+    "description": "Откройте мир магии в Hogwarts Legacy.",
+    "discount": 20,
+    "twoPlayers": false,
+    "eaSubscription": false,
+    "ps5Subscription": true
+  },
+  {
+    "id": 5,
+    "title": "Resident Evil 4 Remake",
+    "price": 49.99,
+    "image": "https://example.com/re4_remake.jpg",
+    "description": "Новая версия классического хоррора с улучшенной графикой.",
+    "discount": 5,
+    "twoPlayers": false,
+    "eaSubscription": false,
+    "ps5Subscription": false
+  },
+  {
+    "id": 6,
+    "title": "Star Wars Jedi: Survivor",
+    "price": 69.99,
+    "image": "https://example.com/jedi_survivor.jpg",
+    "description": "Погрузитесь в мир Звездных Войн в новой приключенческой игре.",
+    "discount": 10,
+    "twoPlayers": false,
+    "eaSubscription": false,
+    "ps5Subscription": false
+  },
+  {
+    "id": 7,
+    "title": "Dying Light 2",
+    "price": 59.99,
+    "image": "https://example.com/dying_light2.jpg",
+    "description": "Откройте для себя постапокалиптический мир с зомби.",
+    "discount": 15,
+    "twoPlayers": true,
+    "eaSubscription": false,
+    "ps5Subscription": true
+  },
+  {
+    "id": 8,
+    "title": "The Last of Us Part I",
+    "price": 69.99,
+    "image": "https://example.com/last_of_us.jpg",
+    "description": "Переосмысленный шедевр с потрясающей графикой.",
+    "discount": 5,
+    "twoPlayers": false,
+    "eaSubscription": false,
+    "ps5Subscription": true
+  },
+  {
+    "id": 9,
+    "title": "Gran Turismo 7",
+    "price": 59.99,
+    "image": "https://example.com/gran_turismo7.jpg",
+    "description": "Реалистичная гоночная игра с множеством автомобилей.",
+    "discount": 0,
+    "twoPlayers": true,
+    "eaSubscription": false,
+    "ps5Subscription": false
+  },
+  {
+    "id": 10,
+    "title": "Ghost of Tsushima: Director's Cut",
+    "price": 49.99,
+    "image": "https://example.com/ghost_of_tsushima.jpg",
+    "description": "Эпическое приключение в Японии с открытым миром.",
+    "discount": 10,
+    "twoPlayers": false,
+    "eaSubscription": false,
+    "ps5Subscription": false
+  }
+]
