@@ -9,17 +9,24 @@ export const useGames = () => {
 };
 
 export const GameProvider = ({ children }) => {
-  const [games, setGames] = useState([]);
+  const [games, setGames] = useState(() => {
+    const cachedGames = localStorage.getItem("games");
+    return cachedGames ? JSON.parse(cachedGames) : [];
+  });
 
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await fetch("/games.json");
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+        if (!localStorage.getItem("games")) {
+          // Если данных нет в localStorage
+          const response = await fetch("/games.json");
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const data = await response.json();
+          setGames(data);
+          localStorage.setItem("games", JSON.stringify(data)); // Кешируем в localStorage
         }
-        const data = await response.json();
-        setGames(data);
       } catch (error) {
         console.error("Ошибка загрузки игр:", error);
       }
