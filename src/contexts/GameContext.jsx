@@ -14,7 +14,7 @@ export const GameProvider = ({ children }) => {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await fetch("./games.json");
+        const response = await fetch("/games.json");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
