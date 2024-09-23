@@ -1,0 +1,58 @@
+{
+  "subscriptions": [
+    {
+      "id": 1,
+      "version": "Essential",
+      "durations": [
+        {
+          "duration": "1 month",
+          "price": 100
+        },
+        {
+          "duration": "3 months",
+          "price": 300
+        },
+        {
+          "duration": "12 months",
+          "price": 1200
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "version": "Extra",
+      "durations": [
+        {
+          "duration": "1 month",
+          "price": 200
+        },
+        {
+          "duration": "3 months",
+          "price": 600
+        },
+        {
+          "duration": "12 months",
+          "price": 2400
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "version": "Deluxe",
+      "durations": [
+        {
+          "duration": "1 month",
+          "price": 300
+        },
+        {
+          "duration": "3 months",
+          "price": 900
+        },
+        {
+          "duration": "12 months",
+          "price": 3600
+        }
+      ]
+    }
+  ]
+}
