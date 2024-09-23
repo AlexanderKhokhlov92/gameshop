@@ -3,12 +3,10 @@ import Home from "./components/pages/home/Home";
 import GamePage from "./components/pages/game/GamePage";
 import Catalog from "./components/pages/catalog/Catalog";
 import Cart from "./components/pages/cart/Cart";
-import Navbar from "./components/ui/navbar/Navbar";
 
 const App = () => {
   return (
     <>
-      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/game/:id" element={<GamePage />} />

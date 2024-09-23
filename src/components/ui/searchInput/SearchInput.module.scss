@@ -1,0 +1,48 @@
+.input {
+  width: 0px;
+  height: 0px;
+  border: none;
+  font-size: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  &:focus {
+    outline: none;
+    width: 100%;
+    border: none;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+
+  &__wrapper {
+    height: 50px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+  }
+
+  &__label {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    position: absolute;
+    right: 15px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 10px;
+  }
+
+  &:focus + &__label {
+    display: none;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    fill: #20bdff;
+  }
+}

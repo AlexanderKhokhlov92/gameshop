@@ -37,30 +37,37 @@ const GamePage = () => {
       <div className={styles.game__imageWarpper}>
         <img src={game.image} alt={game.title} className={styles.game__image} />
       </div>
-      <h1 className={styles.gameTitle}>{game.title}</h1>
-      <p className={styles.gameDescription}>{game.description}</p>
-      <p className={styles.gamePrice}>Цена: ${game.price.toFixed(2)}</p>
-      <p className={styles.gameDiscount}>{game.discount}% off</p>
-      <p className={styles.gamePlayers}>
-        {game.twoPlayers ? "Игра на двоих" : "Одиночная игра"}
-      </p>
-      <p className={styles.gameEA}>
-        {game.eaSubscription ? "Из подписки EA" : "Не из подписки EA"}
-      </p>
-      <p className={styles.gamePS5}>
-        {game.ps5Subscription ? "Из подписки PS5" : "Не из подписки PS5"}
-      </p>
-
-      {/* Если игра уже в корзине, показываем ссылку на корзину */}
-      {isGameInCart ? (
-        <Link to="/cart" className={styles.cartLink}>
-          Перейти в корзину
-        </Link>
-      ) : (
-        <button onClick={handleAddToCart} className={styles.addToCartButton}>
-          Добавить в корзину
-        </button>
-      )}
+      <div className={styles.game__info}>
+        <h1 className={styles.game__title}>{game.title}</h1>
+        <div className={styles.game__priceWrapper}>
+          <p className={styles.game__price}>{game.price} ₽</p>
+          <p className={styles.game__discount}>-{game.discount}%</p>
+        </div>
+        <div className={styles.game__discountTime}>Скидка действует до</div>
+      </div>
+      <div className={styles.game__descriptionWrapper}>
+        <h3 className={styles.game__descriptionTitle}>Описание игры</h3>
+        <p className={styles.game__description}>{game.description}</p>
+      </div>
+      <div className={styles.game__parametrs}>
+        <p className={styles.game__parametrsTitle}>Платформа</p>
+        <p className={styles.game__parametrsValue}>ps</p>
+        <p className={styles.game__parametrsTitle}>Язык</p>
+        <p className={styles.game__parametrsValue}>en</p>
+        <p className={styles.game__parametrsTitle}>Дата релиза</p>
+        <p className={styles.game__parametrsValue}>3.2557</p>
+      </div>
+      <div className={styles.game__orderWrapper}>
+        {isGameInCart ? (
+          <Link to="/cart" className={styles.cartLink}>
+            Перейти в корзину
+          </Link>
+        ) : (
+          <button onClick={handleAddToCart} className={styles.addToCartButton}>
+            Добавить в корзину
+          </button>
+        )}
+      </div>
     </div>
   );
 };

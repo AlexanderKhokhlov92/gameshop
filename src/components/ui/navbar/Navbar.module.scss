@@ -1,0 +1,47 @@
+.navbar {
+  background-color: #ebebeb;
+  padding-left: 19.5px;
+  padding-right: 19.5px;
+  padding-top: 16px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    list-style: none;
+    column-gap: 20px;
+  }
+
+  &__searchLink {
+    display: block;
+    height: 30px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 12px;
+    align-items: center;
+  }
+
+  &__cartLink {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 12px;
+  }
+
+  &__cartLinkIcon {
+    width: 15px;
+    height: 15px;
+  }
+
+  &__searchLinkIcon {
+    color: rgba(43, 42, 42, 0.63);
+    margin-left: 10px;
+  }
+
+  &__searchLinkDescription {
+    color: rgba(43, 42, 42, 0.63);
+    margin-left: 10px;
+  }
+}

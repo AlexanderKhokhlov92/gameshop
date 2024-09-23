@@ -13,7 +13,7 @@ const Game = (props) => {
         />
       </div>
       <div className={styles.game__priceWrapper}>
-        <p className={styles.game__price}>{props.price.toFixed(2)} ₽</p>
+        <p className={styles.game__price}>{props.price} ₽</p>
         <p className={styles.game__discount}>-{props.discount}%</p>
       </div>
     </div>

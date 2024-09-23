@@ -29,7 +29,7 @@ const MainSlider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide-content">
-            <Link to="/catalog?filter=ps5Subscription">
+            <Link to="/catalog?filter=twoPlayers">
               <img className="slide-image" src="./two-players.jpg" />
             </Link>
           </div>

@@ -14,4 +14,11 @@ a {
 
 body {
   color: black;
+  min-width: 375px;
+}
+
+@media (min-width: 550px) {
+  body {
+    display: none;
+  }
 }

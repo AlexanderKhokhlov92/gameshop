@@ -25,6 +25,7 @@
 
 .mainSlider .swiper-wrapper {
   height: 400px;
+  min-width: 375px;
 }
 
 .slide-image {
@@ -36,4 +37,8 @@
   min-width: 100%;
   min-height: auto;
   transform: translate(-50%, -50%);
+}
+
+.mainSlider {
+  min-width: 375px;
 }
