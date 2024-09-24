@@ -29,7 +29,52 @@
 }
 
 .tabContent {
-  padding: 20px;
-  border: 1px solid #ddd;
+  padding: 15px;
   background-color: #ebebeb;
+}
+
+.imageWrapper {
+  overflow: hidden;
+  position: relative;
+  height: 80px;
+  order: -2;
+  border-radius: 12px;
+  grid-row: span 2;
+}
+
+.smallImage {
+  background-color: #ddd;
+  background-color: #ebebeb;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 105%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.listItem {
+  display: none;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  margin-bottom: 10px;
+  column-gap: 30px;
+}
+
+.list {
+  margin-top: 15px;
+}
+
+.subName {
+  font-size: 16px;
+}
+
+.subPrice {
+  grid-row: 1;
+  grid-column: 2;
+  align-self: end;
+  margin-bottom: 8px;
+  font-weight: 700;
 }

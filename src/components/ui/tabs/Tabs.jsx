@@ -1,9 +1,10 @@
 import { useState } from "react";
-import styles from "./Tabs.module.scss"; // Импорт SCSS модуля
+import styles from "./Tabs.module.scss";
+import { useSubscriptions } from "../../../contexts/SubscriptionContext";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(1); // Начальное состояние - первая вкладка
-
+  const subscriptions = useSubscriptions();
   const handleTabClick = (tabIndex) => {
     setActiveTab(tabIndex); // Меняем активную вкладку по клику
   };
@@ -32,9 +33,23 @@ const Tabs = () => {
       </div>
 
       <div className={styles.tabContent}>
-        {activeTab === 1 && <div>Content of Tab 1</div>}
-        {activeTab === 2 && <div>Content of Tab 2</div>}
-        {activeTab === 3 && <div>Content of Tab 3</div>}
+        <ul className={styles.list}>
+          {subscriptions.map((subscription) => (
+            <li className={styles.listItem} key={subscription.id}>
+              <div className={styles.imageWrapper}>
+                <img
+                  src={subscription.images.small}
+                  alt={`${subscription.version} small`}
+                  className={styles.smallImage}
+                />
+              </div>
+              <p className={styles.subName}>{subscription.version}</p>
+              <p className={styles.subPrice}>
+                {subscription.durations[activeTab - 1].price} ₽
+              </p>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

@@ -1,42 +1,53 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import PropTypes from "prop-types";
+import styles from "./BigSlider.module.scss";
+import { Link } from "react-router-dom";
 
-const BigSlider = () => {
+const SmallSlider = ({ slides, to }) => {
+  if (!slides || slides.length === 0) {
+    return <div>Нет доступных товаров</div>;
+  }
+
   return (
-    <div style={{ width: "100vw", padding: "10px" }}>
+    <div>
       <Swiper
         slidesPerView={1.5}
-        spaceBetween={20}
+        spaceBetween={10}
         loop={false}
-        centeredSlides={false}
+        initialSlide={0}
         grabCursor={true}
+        style={{ paddingLeft: "5%" }}
       >
-        <SwiperSlide>
-          <div style={slideStyle}>Слайд 1</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div style={slideStyle}>Слайд 2</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div style={slideStyle}>Слайд 3</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div style={slideStyle}>Слайд 4</div>
-        </SwiperSlide>
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <Link to={`${to}/${slide.id}`} className={styles.slide}>
+              <div className={styles.slide__imageWrapper}>
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className={styles.slide__image}
+                />
+              </div>
+              <p className={styles.slide__price}>{slide.price} ₽</p>
+              <h3 className={styles.slide__title}>{slide.title}</h3>
+            </Link>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
 };
 
-// Пример стилей для слайда
-const slideStyle = {
-  display: "flex",
-  width: "100%",
-  height: "300px",
-  backgroundColor: "#ddd",
-  borderRadius: "10px",
+SmallSlider.propTypes = {
+  slides: PropTypes.arrayOf(
+    PropTypes.shape({
+      image: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+  to: PropTypes.string.isRequired,
 };
 
-export default BigSlider;
+export default SmallSlider;

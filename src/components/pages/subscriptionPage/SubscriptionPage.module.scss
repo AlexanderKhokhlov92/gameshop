@@ -1,0 +1,137 @@
+.subscription {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: #ebebeb;
+  min-height: 100vh;
+  padding-bottom: 95px;
+
+  &__title {
+    margin-top: 15px;
+    font-weight: normal;
+    font-size: 20px;
+  }
+
+  &__imageWarpper {
+    height: 385px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    order: -1;
+  }
+
+  &__image {
+    background-color: #ebebeb;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 110vw;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &__discountTime {
+    background-color: #ebebeb;
+    height: 40px;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 14px;
+    color: rgba(43, 42, 42, 0.63);
+  }
+
+  &__info {
+    background-color: #fff;
+    padding-bottom: 20px;
+    border-radius: 18px;
+    margin-top: -18px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 1;
+  }
+
+  &__descriptionWrapper {
+    background-color: #fff;
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 15px;
+    border-radius: 18px;
+  }
+
+  &__descriptionTitle {
+    font-weight: normal;
+    font-size: 12px;
+  }
+
+  &__description {
+    margin-top: 10px;
+  }
+
+  &__orderWrapper {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    z-index: 1;
+    background-color: #ebebeb;
+    border-top: 2px solid #ddd;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__parametrs {
+    background-color: #fff;
+    border-radius: 18px;
+    margin-top: 10px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__parametrsTitle {
+    color: rgba(43, 42, 42, 0.63);
+    font-size: 14px;
+    margin-bottom: 10px;
+    grid-column: 1;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__parametrsValue {
+    font-size: 14px;
+    margin-bottom: 10px;
+    grid-column: 2;
+    justify-self: end;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.addToCartButton {
+  display: flex;
+  font-size: 18px;
+  border: none;
+  background-color: #5433ff;
+  color: #fff;
+  width: 100%;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 12px;
+}
+.cartLink {
+  display: flex;
+  font-size: 18px;
+  border: none;
+  background-color: #34c759;
+  color: #fff;
+  width: 100%;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 12px;
+}

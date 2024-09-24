@@ -1,58 +1,41 @@
-{
-  "subscriptions": [
-    {
-      "id": 1,
-      "version": "Essential",
-      "durations": [
-        {
-          "duration": "1 month",
-          "price": 100
-        },
-        {
-          "duration": "3 months",
-          "price": 300
-        },
-        {
-          "duration": "12 months",
-          "price": 1200
-        }
-      ]
+[
+  {
+    "id": 1,
+    "version": "Essential",
+    "images": {
+      "small": "https://sun9-22.userapi.com/impg/w0BWVD-ktb2C60nJm9lXg20_51YZfQTQrYb8EA/H0G7miPLwCs.jpg?size=794x807&quality=95&sign=55b72012f9343d519e27196e9ecd0c4f&c_uniq_tag=-XxiWkKHzhFQCAFupMsJcQuURPUFlTSyrErySa8hJwQ&type=album",
+      "large": "./images/essential-large.jpg"
     },
-    {
-      "id": 2,
-      "version": "Extra",
-      "durations": [
-        {
-          "duration": "1 month",
-          "price": 200
-        },
-        {
-          "duration": "3 months",
-          "price": 600
-        },
-        {
-          "duration": "12 months",
-          "price": 2400
-        }
-      ]
+    "durations": [
+      { "duration": "1 month", "price": 100 },
+      { "duration": "3 months", "price": 300 },
+      { "duration": "12 months", "price": 1200 }
+    ]
+  },
+  {
+    "id": 2,
+    "version": "Extra",
+    "images": {
+      "small": "https://i.pinimg.com/originals/2b/b8/ff/2bb8ffbd3997a92c1ef63bb3161b6129.png",
+      "large": "./images/essential-large.jpg"
     },
-    {
-      "id": 3,
-      "version": "Deluxe",
-      "durations": [
-        {
-          "duration": "1 month",
-          "price": 300
-        },
-        {
-          "duration": "3 months",
-          "price": 900
-        },
-        {
-          "duration": "12 months",
-          "price": 3600
-        }
-      ]
-    }
-  ]
-}
+    "durations": [
+      { "duration": "1 month", "price": 200 },
+      { "duration": "3 months", "price": 600 },
+      { "duration": "12 months", "price": 2400 }
+    ]
+  },
+  {
+    "id": 3,
+    "version": "Deluxe",
+    "images": {
+      "small": "https://cdn.vox-cdn.com/thumbor/fdRT2c0Wv2q7XYtqOTmGJcd-Ud4=/0x0:960x540/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/52077597/ps_plus.0.jpeg",
+      "large": "./images/essential-large.jpg"
+    },
+    "durations": [
+      { "duration": "1 month", "price": 300 },
+      { "duration": "3 months", "price": 900 },
+      { "duration": "12 months", "price": 3600 }
+    ]
+  }
+]
