@@ -1,4 +1,4 @@
-import styles from "./preOrders.module.scss";
+import styles from "./PreOrders.module.scss";
 import { useGames } from "../../contexts/GameContext";
 import SmallSlider from "../ui/sliders/SmallSlider/SmallSlider";
 
