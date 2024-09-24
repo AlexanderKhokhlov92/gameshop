@@ -28,17 +28,6 @@ const App = () => {
           tg.BackButton.hide(); // На главной странице скрываем кнопку "Назад"
         }
       }
-
-      // Если это главная страница, показываем кнопку "Закрыть"
-      if (location.pathname === "/") {
-        tg.MainButton.setText("Закрыть");
-        tg.MainButton.show();
-        tg.MainButton.onClick(() => {
-          tg.close(); // Закрываем приложение
-        });
-      } else {
-        tg.MainButton.hide(); // На всех остальных страницах скрываем кнопку "Закрыть"
-      }
     }
 
     // Очистка при размонтировании
@@ -46,7 +35,6 @@ const App = () => {
       if (tg) {
         tg.BackButton.hide();
         tg.BackButton.offClick();
-        tg.MainButton.hide();
       }
     };
   }, [location, navigate]);
