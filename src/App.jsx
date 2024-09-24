@@ -1,4 +1,4 @@
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Home from "./components/pages/home/Home";
 import GamePage from "./components/pages/game/GamePage";
@@ -8,30 +8,48 @@ import SubscriptionPage from "./components/pages/subscriptionPage/SubscriptionPa
 
 const App = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
-    if (window.Telegram.WebApp) {
-      window.Telegram.WebApp.ready(); // Уведомляем Telegram, что мини-приложение готово
+    const tg = window.Telegram.WebApp;
 
-      // Показать кнопку "Назад" в интерфейсе Telegram Web App
-      window.Telegram.WebApp.BackButton.show();
+    if (tg) {
+      tg.ready(); // Уведомляем Telegram, что мини-приложение готово
 
-      // Обработчик нажатия кнопки "Назад"
-      window.Telegram.WebApp.BackButton.onClick(() => {
-        navigate(-1); // Возврат на предыдущую страницу
-      });
+      // Проверяем поддержку кнопки "Назад" в версии Telegram
+      if (tg.version && parseFloat(tg.version) >= 6.1) {
+        // Если это не главная страница, показываем кнопку "Назад"
+        if (location.pathname !== "/") {
+          tg.BackButton.show();
+          tg.BackButton.onClick(() => {
+            navigate(-1); // Возвращаемся на предыдущую страницу
+          });
+        } else {
+          tg.BackButton.hide(); // На главной странице скрываем кнопку "Назад"
+        }
+      }
 
-      // Очистка при размонтировании
-      return () => {
-        window.Telegram.WebApp.BackButton.hide();
-        window.Telegram.WebApp.BackButton.offClick();
-      };
+      // Если это главная страница, показываем кнопку "Закрыть"
+      if (location.pathname === "/") {
+        tg.MainButton.setText("Закрыть");
+        tg.MainButton.show();
+        tg.MainButton.onClick(() => {
+          tg.close(); // Закрываем приложение
+        });
+      } else {
+        tg.MainButton.hide(); // На всех остальных страницах скрываем кнопку "Закрыть"
+      }
     }
-  }, [navigate]);
 
-  const closeApp = () => {
-    window.Telegram.WebApp.close(); // Закрытие мини-приложения
-  };
+    // Очистка при размонтировании
+    return () => {
+      if (tg) {
+        tg.BackButton.hide();
+        tg.BackButton.offClick();
+        tg.MainButton.hide();
+      }
+    };
+  }, [location, navigate]);
 
   return (
     <>
