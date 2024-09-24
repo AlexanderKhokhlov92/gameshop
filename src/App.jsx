@@ -3,7 +3,7 @@ import Home from "./components/pages/home/Home";
 import GamePage from "./components/pages/game/GamePage";
 import Catalog from "./components/pages/catalog/Catalog";
 import Cart from "./components/pages/cart/Cart";
-import SubscriptionPage from "./components/pages/subscriptionPage/subscriptionPage";
+import SubscriptionPage from "./components/pages/subscriptionPage/SubscriptionPage";
 
 const App = () => {
   return (
